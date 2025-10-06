@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# 🚀 PIGRE – Processador Inteligente de Gestão de Resíduos Espaciais
 
-## Project info
+> **MVP – Hackathon NASA / Prototipagem**  
+> O PIGRE é um sistema de **simulação e controle de reciclagem de resíduos em ambientes extremos (ex.: Marte)**.  
+> Seu objetivo é **maximizar a economia logística (ESM – Equivalent System Mass)** convertendo resíduos em combustível, peças metálicas ou redução de volume, priorizando rotas com maior impacto positivo para a missão.
 
-**URL**: https://lovable.dev/projects/a74ffc21-5a5e-49d8-8520-f21c066acc96
+---
 
-## How can I edit this code?
+## 🎯 Objetivo do Projeto
+- Demonstrar um **MVP visual e interativo** do PIGRE.  
+- Simular cenários de processamento de resíduos com **impactos diretos nos KPIs da missão**.  
+- Fornecer um **painel didático e intuitivo** para explicar aos jurados e stakeholders como o motor de decisão reduz custos logísticos em missões espaciais.  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🖥️ Demonstração (MVP)
+- Interface construída em **React + TailwindCSS + Lucide Icons**.  
+- Painel principal (**Control**) apresenta:
+  - 📊 KPIs de energia, massa processada, combustível e peças.
+  - 🛰️ Economia logística (ΔESM) em destaque.
+  - 🔄 Simulação de processos (pirólise, fusão, compactação).
+  - ⚡ Logs de eventos em tempo real.
+  - 🍰 Gráficos visuais (pizza, barras empilhadas).
+  - 🛠️ Ações rápidas para ajustes de priorização.
+  - 📈 Painel comparativo **Antes → Depois** após cada simulação.
+  - 📂 Exportação de dados para análise.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a74ffc21-5a5e-49d8-8520-f21c066acc96) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📊 Regras de Negócio (Resumo)
+1. **Processos disponíveis**:
+   - 🔥 **Pirólise** → resíduos plásticos → combustível líquido (CH₄/O₂).  
+   - ⚙️ **Fusão** → metais → peças estruturais (para impressão 3D).  
+   - 📦 **Compactação** → resíduos mistos → redução de volume.  
 
-**Use your preferred IDE**
+2. **Métrica chave**:  
+   - **ΔESM (Equivalent System Mass)** → economia logística em *kg-equivalente*.  
+   - Fórmula combina energia, massa, volume e fatores de equivalência.  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. **Motor de decisão**:
+   - Avalia impacto de cada lote processado.  
+   - Prioriza rotas que maximizam ΔESM.  
+   - Ajusta automaticamente prioridades em tempo real.  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ⚙️ Tecnologias Utilizadas
+- **React (TSX)** → front-end da aplicação.  
+- **TailwindCSS** → estilização responsiva e moderna.  
+- **Lucide-React** → ícones para KPIs e módulos.  
+- **React Hooks (useState, useEffect, useMemo, useRef)** → controle do estado e simulação.  
+- **Simulação interna** → cálculos energéticos e ΔESM sem dependências externas.  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a74ffc21-5a5e-49d8-8520-f21c066acc96) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
